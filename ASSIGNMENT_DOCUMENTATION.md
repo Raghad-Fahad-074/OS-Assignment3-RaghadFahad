@@ -322,16 +322,17 @@ Give TWO examples where synchronization is critical:
 
 ## Summary
 
-**Total time spent on assignment**: 
+**Total time spent on assignment**: Approximately 6–7 hours in total
+
 
 **Key takeaways**: 
-1. 
-2. 
-3. 
+1. I learned how race conditions occur and how to prevent them using synchronization mechanisms.
+2. I understood the difference between mutex locks (ReentrantLock) and semaphores and when to use each.
+3. I gained practical experience in designing thread-safe systems using fine-grained locking and proper resource management.
 
-**Most challenging aspect**: 
+**Most challenging aspect**: The most challenging part was designing the correct synchronization strategy, especially deciding how to use multiple locks efficiently without causing deadlocks or reducing performance. Understanding lock granularity and ensuring thread safety across all shared resources required careful analysis and testing.
 
-**What I'm most proud of**: 
+**What I'm most proud of**: I am most proud of successfully designing and implementing a fully synchronized CPU scheduling simulation that correctly combines mutex locks and semaphores. I was able to eliminate race conditions, ensure thread safety, and maintain consistent results across multiple runs. I am also proud of applying fine-grained locking effectively, which improved concurrency while keeping the system stable and efficient.
 
 ---
 
