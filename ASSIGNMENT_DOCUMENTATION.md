@@ -44,16 +44,16 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 2 - [Date, Time]
-**What I implemented**: 
+### Entry 2 - [6/5/2026, 10:40]
+**What I implemented**: Used multiple mutex locks (ReentrantLock) for each shared counter to achieve fine-grained locking
 
-**Challenges encountered**: 
+**Challenges encountered**: understanding the difference between coarse-grained locking (single global lock) and fine-grained locking (multiple independent locks).
 
-**How I solved it**: 
+**How I solved it**: Studied lock granularity concepts and recognized that the counters are independent, so using multiple mutex locks reduces contention and improves concurrency.
 
-**Testing approach**: 
+**Testing approach**: Ran the program multiple times (10 runs) and verified that all counters produced consistent and correct results
 
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
