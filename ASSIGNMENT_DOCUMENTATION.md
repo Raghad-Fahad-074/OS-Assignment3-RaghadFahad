@@ -31,16 +31,16 @@
 
 Document your development process with **minimum 3 entries** showing progression:
 
-### Entry 1 - [Date, Time]
-**What I implemented**: 
+### Entry 1 - [6/5/2026, 10:25]
+**What I implemented**: Initialized the project repository, updated the student ID in the code, and made the initial commit.
 
-**Challenges encountered**: 
+**Challenges encountered**: No major challenges; the setup process was straightforward
 
-**How I solved it**: 
+**How I solved it**: Followed the standard cloning and setup steps using VS Code
 
-**Testing approach**: 
+**Testing approach**: Compiled and ran the unsynchronized version to observe race conditions, such as inconsistent shared variable values and log outputs.
 
-**Time spent**: 
+**Time spent**: 40 minutes
 
 ---
 
