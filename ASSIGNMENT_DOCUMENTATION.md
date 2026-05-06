@@ -149,7 +149,10 @@ Additionally, the semaphore is acquired at the beginning of the critical section
 
 **Your Answer**:
 
-[Your answer here - explain coarse-grained vs fine-grained locking, independence of counters, concurrency implications. Show understanding of when to use each approach. 5-8 sentences expected.]
+[I chose fine-grained locking by using three separate ReentrantLock instances, one for each counter (contextSwitchLock, completedProcessLock, and waitingTimeLock).
+Reason: The three counters are independent, meaning updating one does not depend on the others. Using a single coarse-grained lock would cause unnecessary blocking, as threads updating different counters would still have to wait for each other.
+Trade-offs: Fine-grained locking increases code complexity and requires careful design, while coarse-grained locking is simpler but reduces concurrency and system throughput.
+Since the counters are independent, fine-grained locking provides better concurrency by allowing multiple threads to update different resources simultaneously. This approach follows the principle of protecting each shared resource with its own lock.]
 
 ---
 
