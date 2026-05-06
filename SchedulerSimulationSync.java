@@ -110,24 +110,23 @@ class Process implements Runnable {
     
     @Override
     public void run() {
-        // TODO #3: Acquire CPU semaphore before executing
-        // This ensures only allowed number of processes run simultaneously
-        
+        try {
+            SharedResources.cpuSemaphore.acquire();
         try {
             if (startTime == -1) {
                 startTime = System.currentTimeMillis();
             }
             
-            // Increment context switch counter
+            
             SharedResources.incrementContextSwitch();
             
             int runTime = Math.min(timeQuantum, remainingTime);
             
-            String quantumBar = createProgressBar(0, 15);
+            
             String message = "  ▶ " + name + " (Priority: " + priority + ") executing quantum [" + runTime + "ms]";
             System.out.println(Colors.BRIGHT_GREEN + message + Colors.RESET);
             
-            // Log execution
+            
             SharedResources.logExecution(name + " started quantum execution");
             
             try {
@@ -173,9 +172,11 @@ class Process implements Runnable {
             System.out.println();
             
         } finally {
-            // TODO #4: Release CPU semaphore here
-            // Always release in finally block to prevent deadlocks!
+            SharedResources.cpuSemaphore.release();
         }
+     }  catch (InterruptedException e) {
+            System.out.println(Colors.RED + "  ✗ " + name + " semaphore interrupted." + Colors.RESET);
+     }
     }
     
     private String createProgressBar(int progress, int width) {
