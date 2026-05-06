@@ -267,13 +267,13 @@ the CPU at any moment – exactly like a real uniprocessor system.
 ---
 
 ### Test 4: Different Scenarios
-**Scenario tested**: [e.g., different time quantum, more processes, etc.]
+**Scenario tested**: [ Running the system with different numbers of processes and varying time quantum values.]
 
-**Purpose**: 
+**Purpose**: To evaluate system behavior under different workload conditions and verify scheduler stability
 
-**Results**: 
+**Results**: The system maintained correct execution behavior across all scenarios, with processes being scheduled fairly and synchronization remaining stable.
 
-**What I learned**: 
+**What I learned**: Changing time quantum and process count affects scheduling behavior and context switch frequency, but proper synchronization ensures correctness is preserved regardless of workload.
 
 ---
 
