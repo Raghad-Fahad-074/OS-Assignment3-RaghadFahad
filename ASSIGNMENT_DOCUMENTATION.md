@@ -122,7 +122,8 @@ Incorrect behavior: The program may crash or some log entries may be missing.]
 
 **Your Answer**:
 
-[Your answer here - explain your implementation choices]
+[ReentrantLock is a mutual exclusion (mutex) mechanism that ensures only one thread can access a critical section at a time. I used it to protect shared resources such as counters and the execution log because these require exclusive access to maintain data consistency.
+Semaphore manages a set of permits and allows a limited number of threads to access a resource concurrently. A binary semaphore (1 permit) behaves similarly to a mutex, while a counting semaphore can allow multiple threads. I used Semaphore(1) to control CPU access, ensuring that only one process executes at a time, which simulates a single-core CPU.]
 
 ---
 
