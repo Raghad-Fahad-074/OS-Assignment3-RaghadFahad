@@ -304,7 +304,7 @@ Give TWO examples where synchronization is critical:
 
 ## Part 6: GitHub Repository Information
 
-**Repository URL**:
+**Repository URL**: https://github.com/Raghad-Fahad-074/OS-Assignment3-RaghadFahad.git
 
 **Number of commits**: 7 commits
 
