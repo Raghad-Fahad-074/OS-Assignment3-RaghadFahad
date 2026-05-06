@@ -247,11 +247,11 @@ the CPU at any moment – exactly like a real uniprocessor system.
 ### Test 2: Exception Testing
 **What I tested**: Checking for ConcurrentModificationException
 
-**Testing procedure**: 
+**Testing procedure**: Increased logging activity by executing multiple processes concurrently and repeatedly adding log entries to executionLog.
 
-**Results**: 
+**Results**: No ConcurrentModificationException or related runtime errors occurred during execution.
 
-**What this proves**: 
+**What this proves**: The use of ReentrantLock for the execution log successfully ensures thread-safe access to the shared ArrayList.
 
 ---
 
