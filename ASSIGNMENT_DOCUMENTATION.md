@@ -106,7 +106,14 @@ Document your development process with **minimum 3 entries** showing progression
 
 **Your Answer**:
 
-[Your answer here - 4-6 sentences with code examples]
+[First race condition – contextSwitchCount++ (and other counters).
+Shared resource: integer counters.
+Problem: The increment operation (++) is not atomic. Multiple threads may read the same value, increment it, and write it back, resulting in lost updates.
+Incorrect behavior: The final counter value may be lower than the actual number of increments.
+Second race condition – executionLog.add(message).
+Shared resource: ArrayList<String>.
+Problem: ArrayList is not thread-safe. Concurrent add() operations can corrupt its internal structure, cause runtime exceptions such as ConcurrentModificationException, or result in lost entries.
+Incorrect behavior: The program may crash or some log entries may be missing.]
 
 ---
 
