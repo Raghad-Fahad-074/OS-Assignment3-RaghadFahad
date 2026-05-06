@@ -231,16 +231,16 @@ the CPU at any moment – exactly like a real uniprocessor system.
 
 **Testing procedure**: 
 ```bash
-# Commands used (run the program at least 5 times)
+ Ran java SchedulerSimulationSync five times.
 ```
 
 **Results**: 
-(Show that running multiple times produces consistent, correct results)
+(Each execution produced consistent and stable results, including identical total counts for context switches and completed processes, as well as consistent waiting time calculations.)
 
 **Why synchronization is necessary**: 
-(Explain what race conditions COULD occur without synchronization, even if you didn't observe them. Explain which shared resources need protection and why.)
+( Without synchronization, race conditions could occur when multiple threads update shared resources such as contextSwitchCount, completedProcessCount, totalWaitingTime, and executionLog. These operations are not atomic and could lead to lost updates or inconsistent values. Therefore, mutex locks are required to ensure thread-safe updates and data consistency.)
 
-**Conclusion**: 
+**Conclusion**: Synchronization ensures deterministic and reliable results across multiple executions
 
 ---
 
