@@ -132,7 +132,11 @@ Semaphore manages a set of permits and allows a limited number of threads to acc
 
 **Your Answer**:
 
-[Your answer here - reference try-finally blocks, lock ordering, etc.]
+[Deadlock occurs when two or more threads are permanently blocked, each waiting for resources held by others.
+Prevention techniques used:
+Lock ordering (simplified usage): I ensured that no thread holds more than one lock at a time, eliminating the possibility of circular wait.
+try-finally blocks: Every lock() or acquire() is paired with a corresponding unlock() or release() inside a finally block. This guarantees that resources are always released, even if an exception occurs.
+Additionally, the semaphore is acquired at the beginning of the critical section and released immediately after execution, avoiding nested locking and reducing the risk of deadlock.]
 
 ---
 
