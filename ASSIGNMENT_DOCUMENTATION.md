@@ -57,16 +57,16 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 3 - [Date, Time]
-**What I implemented**: 
+### Entry 3 - [7/5/2026, 12:00]
+**What I implemented**:  Applied a mutex lock (ReentrantLock) to protect the shared execution log (ArrayList) from concurrent access
 
-**Challenges encountered**: 
+**Challenges encountered**: Initially forgot to release the lock, which could potentially cause a deadlock.
 
-**How I solved it**: 
+**How I solved it**: Refactored the code to ensure all lock operations are placed inside try-finally blocks so that the lock is always released
 
-**Testing approach**: 
+**Testing approach**: Increased logging activity and confirmed that no ConcurrentModificationException or inconsistent behavior occurred. 
 
-**Time spent**: 
+**Time spent**: 50 minutes
 
 ---
 
