@@ -70,16 +70,16 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 4 - [Date, Time]
-**What I implemented**: 
+### Entry 4 - [7/5/2026, 2:00]
+**What I implemented**: Introduced a binary semaphore (1 permit) to control CPU access and enforce mutual exclusion among threads.
 
-**Challenges encountered**: 
+**Challenges encountered**: Ensuring that the semaphore is consistently applied in both run() and runToCompletion() methods.
 
-**How I solved it**: 
+**How I solved it**: Wrapped both methods with acquire() and release() calls inside try-finally blocks to guarantee proper resource management.
 
-**Testing approach**: 
+**Testing approach**: Temporarily increased the semaphore permits to 2 to observe concurrent execution, then reverted it back to 1 to confirm strict mutual exclusion.
 
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
