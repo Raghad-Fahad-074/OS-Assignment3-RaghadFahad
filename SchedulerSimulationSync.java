@@ -31,7 +31,7 @@ class Colors {
 class SharedResources {
      // Fine-grained locks for independent counters (better concurrency)
     public static final ReentrantLock contextSwitchLock = new ReentrantLock();
-
+    public static final ReentrantLock completedProcessLock = new ReentrantLock();
     
     
     public static int contextSwitchCount = 0;      // Shared counter - NEEDS PROTECTION!
