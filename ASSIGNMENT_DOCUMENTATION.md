@@ -258,11 +258,11 @@ the CPU at any moment – exactly like a real uniprocessor system.
 ### Test 3: Correctness Verification
 **What I tested**: Verifying correct final values (total burst time, context switches, etc.)
 
-**Expected values**: 
+**Expected values**: All processes should complete execution exactly once, with accurate updates to context switches and waiting time based on scheduling behavior.
 
-**Actual values**: 
+**Actual values**: The final output consistently showed correct totals matching the number of processes and proper accumulation of waiting time and context switches.
 
-**Analysis**: 
+**Analysis**: The results confirm that the scheduler logic (Round Robin with synchronization) works correctly and that shared data is properly protected using mutex locks and semaphore control.
 
 ---
 
