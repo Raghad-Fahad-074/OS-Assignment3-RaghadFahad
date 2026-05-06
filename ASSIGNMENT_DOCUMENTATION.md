@@ -304,15 +304,19 @@ Give TWO examples where synchronization is critical:
 
 ## Part 6: GitHub Repository Information
 
-**Repository URL**: 
+**Repository URL**:
 
-**Number of commits**: 
+**Number of commits**: 7 commits
+
 
 **Commit messages**: 
-1. 
-2. 
-3. 
-4. 
+1. Initial project setup and student ID update
+2.Implemented unsynchronized baseline version for testing race conditions
+3. Added fine-grained locking using ReentrantLock for shared counters
+4. Implemented thread-safe execution log using mutex lock
+5. Fixed synchronization issues using try-finally blocks to prevent deadlocks
+6. Implemented semaphore-based CPU control (single-core simulation)
+7. Final testing, debugging, and documentation improvements
 
 ---
 
