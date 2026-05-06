@@ -160,18 +160,22 @@ Since the counters are independent, fine-grained locking provides better concurr
 
 ### Critical Section #1: Counter Variables
 
-**Which variables**: 
+**Which variables**:  `contextSwitchCount`, `completedProcessCount`, `totalWaitingTime`
 
-**Why they need protection**: 
+**Why they need protection**:  The read-modify-write operations (increment, addition) are not atomic; 
+without locks, updates can be lost.
 
-**Synchronization mechanism used**: 
+**Synchronization mechanism used**:  Three separate `ReentrantLock`s (fine-grained)
 
 **Code snippet**:
 ```java
-// Paste your implementation here
+public static void incrementContextSwitch() {
+contextSwitchLock.lock();
+try { contextSwitchCount++; } finally { contextSwitchLock.unlock(); }
+}
 ```
 
-**Justification**: 
+**Justification**:  Each counter is independent, so separate locks maximise concurrency.
 
 ---
 
