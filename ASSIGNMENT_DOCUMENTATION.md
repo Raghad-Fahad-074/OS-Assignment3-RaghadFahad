@@ -83,16 +83,16 @@ Document your development process with **minimum 3 entries** showing progression
 
 ---
 
-### Entry 5 - [Date, Time]
-**What I implemented**: 
+### Entry 5 - [7/5/2026, 9:20]
+**What I implemented**: Completed the project documentation, recorded the demonstration video, and finalized all commits.
 
-**Challenges encountered**: 
+**Challenges encountered**: Clearly explaining the concept of fine-grained locking using multiple mutex locks.
 
-**How I solved it**: 
+**How I solved it**: Used a simple conceptual diagram and provided a structured explanation in the documentation.
 
-**Testing approach**: 
+**Testing approach**: Ran the final implementation multiple times (5 runs) and verified that all results (e.g., waiting time and process counts) were consistent and deterministic.
 
-**Time spent**: 
+**Time spent**: 2 hours
 
 ---
 
